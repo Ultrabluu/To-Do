@@ -1,0 +1,32 @@
+def ToDoMain():
+    print("Welcome to the To-Do-List")
+    print("1 - Add to-do")
+    print("2 - View the list")
+    print("3 - Exit")
+#Choice-loop
+    choice = raw_input("Choose wisely \n")
+
+
+    if choice == "1":
+        DataBase(1)
+
+    if choice == "2":
+        DataBase(2)
+    if choice == "3":
+        quit()
+
+    #Input
+def DataBase(choice2):
+    #Checks, if the list is defined.
+    result = dir().count('database')
+    if result == 0:
+        db = []
+    if choice2 == 1:
+        db.append(raw_input("Write the do and press enter"))
+    if choice2 == 2:
+        print(db[:len(db)])
+    ToDoMain()
+
+
+
+ToDoMain()
